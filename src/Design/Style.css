@@ -1,0 +1,860 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--changeMood);
+    font-family: 'Exo 2', sans-serif;
+}
+
+.light-theme {
+    --bgcolor1: #0f001e;
+    --changeMood: aliceblue;
+    --black: black;
+    --jobDesc: #181e31;
+    --jobDesc2: #181e31;
+    transition: 0.5s linear;
+}
+
+.dark-theme {
+    --bgcolor1: aliceblue;
+    --changeMood: black;
+    --black: aliceblue;
+    --jobDesc: aliceblue;
+    --jobDesc2: #d5d5d559;
+    transition: 0.5s linear;
+}
+
+
+
+body {
+    background-color: var(--bgcolor1);
+    margin: 50px 100px;
+}
+
+
+/* -------- Home -------- */
+.home {
+    display: flex;
+    align-items: center;
+    background-color: var(--jobDesc2);
+    border-radius: 15px;
+}
+
+.home .companyImg img {
+    width: 400px;
+    height: 430px;
+    border-radius: 15px;
+}
+
+.home .all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.home .all .Yes-or-No {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home .all .Yes-or-No .question {
+    font-size: 19px;
+    text-transform: capitalize;
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.home .all .Yes-or-No label {
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.home .all .Yes-or-No label input {
+    margin: 0 7px;
+}
+
+.home .all .No,
+.home .all .Yes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.home .all .No p {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.home .all .No input {
+    background-color: #5314ff;
+    padding: 15px;
+    border-radius: 10px;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+.home .all .Yes button {
+    background-color: #5314ff;
+    padding: 15px;
+    border-radius: 10px;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* -------- User Info -------- */
+
+.content-userinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-userinfo .username p {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.content-userinfo .icon p i {
+    background-color: var(--changeMood);
+    color: var(--bgcolor1);
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+/* -------- Job -------- */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--changeMood);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content .question p {
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.content .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .btn p {
+    margin-right: 15px;
+}
+
+.content .btn p i,
+.content .btn p span {
+    color: var(--black);
+    margin: 0 5px;
+}
+
+.content .btn button:nth-child(2) {
+    border: none;
+    background-color: #5314ff;
+    padding: 7px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    color: var(--changeMooe);
+    cursor: pointer;
+}
+
+.content .btn button:nth-child(3) {
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    color: var(--changeMood);
+    border: 1px solid var(--black);
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: var(--black);
+}
+
+
+/* -------- Job Description -------- */
+
+.job-desc-content {
+    margin-top: 50px;
+}
+
+.job-desc-content .jobinvitation {
+    background-color: #5314ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 15px 15px 0 0;
+}
+
+.descriptipn {
+    background-color: var(--jobDesc2);
+    padding: 20px 45px;
+    border-radius: 0 0 15px 15px;
+}
+
+.job-desc-content .descriptipn .img {
+    display: flex;
+    align-items: center;
+}
+
+.job-desc-content .descriptipn img {
+    width: 80px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.job-desc-content .descriptipn .img div p:nth-child(1) {
+    font-size: 25px;
+}
+
+.job-desc-content .descriptipn .img div p:nth-child(2),
+.job-desc-content .descriptipn .img div p:nth-child(3) {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.job-desc-content .uxJob {
+    margin-top: 35px;
+    width: 700px;
+}
+
+.item .title {
+    display: flex;
+    align-items: center;
+}
+
+.item .Icontent {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+
+.item .Icontent.show {
+    height: auto;
+    transition: 0.5s linear;
+}
+
+.job-question {
+    margin-top: 40px;
+}
+
+.job-question .title {
+    margin: 15px 0px;
+}
+
+.job-question .question {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.job-question .list {
+    margin: 10px 20px;
+}
+
+
+
+/* -------- User Data -------- */
+
+.contentInfo .confirmInfo {
+    background-color: #646a7c;
+    display: flex;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    height: 50px;
+    padding: 0 30px;
+}
+
+.contentInfo .confirmInfo p i {
+    cursor: pointer;
+    background-color: var(--jobDesc);
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.validate {
+    background-color: var(--jobDesc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    border-radius: 0 0 15px 15px;
+}
+
+.validate .one {
+    width: 235px;
+    text-align: center;
+}
+
+.validate .one p {
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.validate .two {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.validate .two form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.validate .two form input {
+    border: none;
+    outline: none;
+    background-color: darkgray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 340px;
+    color: var(--black);
+}
+
+.validate .two form .input {
+    margin: 15px 0;
+}
+
+.validate .two form .input p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.validate .resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.validate .resume .para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted gray;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 45px 180px;
+    gap: 10px;
+}
+
+.validate .resume .para i {
+    font-size: 40px;
+    margin: 0 15px;
+}
+
+
+.contentInfo .contect-privacy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.contentInfo .contect-privacy .privacy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.contentInfo .contect-privacy .privacy input {
+    margin: 0px 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.contentInfo .contect-privacy .btn {
+    margin: 20px 0;
+}
+
+.contentInfo .contect-privacy .btn button {
+    background-color: #5314ff;
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* -------- Interview -------- */
+
+.interview .navInter {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    padding: 0 30px;
+}
+
+.interview .navInter p {
+    color: white;
+    font-size: 17px;
+}
+
+.interview .navInter p i {
+    cursor: pointer;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+    color: black;
+    margin-right: 20px;
+}
+
+.interview .meeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181e31;
+    border-radius: 0 0 15px 15px;
+    height: auto;
+}
+
+.interview .meetingSart .popup {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #0f001e;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.interview .meetingSart .popup p {
+    font-size: 15px;
+    margin: 30px 0;
+    text-transform: capitalize;
+}
+
+.interview .meeting .meetingImg img {
+    width: 500px;
+    border-radius: 0 0 15px 15px;
+}
+
+.interview .meeting .meetingSart {
+    width: 100%;
+    text-align: center;
+}
+
+.interview .meeting .meetingSart button {
+    background-color: #5314ff;
+    color: aliceblue;
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+
+
+/* -------- Footer -------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+
+.footer .unsubscribe {
+    margin: 20px 0;
+    text-align: center;
+    width: 66%;
+    line-height: 30px;
+}
+
+.footer .footerImg img {
+    width: 150px;
+}
+
+
+/* ============ Responsive ============ */
+
+@media (max-width:900px) {
+
+    body {
+        margin: 30px 50px;
+    }
+
+    .content-userinfo .username p {
+        font-size: 15px;
+    }
+
+    .footer .unsubscribe {
+        width: 75%;
+    }
+
+    .content .btn p {
+        margin-right: 10px;
+    }
+
+    .content .btn p i,
+    .content .btn p span {
+        font-size: 13px;
+    }
+
+    .content .btn button:nth-child(2) {
+        padding: 7px 5px;
+    }
+
+    .content .btn button:nth-child(3) {
+        padding: 7px 5px;
+    }
+
+    .descriptipn {
+        padding: 20px 30px;
+    }
+
+    .job-desc-content .descriptipn .img {
+        display: flex;
+        align-items: center;
+    }
+
+    .job-desc-content .descriptipn img {
+        width: 80px;
+        margin-right: 20px;
+    }
+
+    .job-desc-content .descriptipn .img div p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .job-desc-content .descriptipn .img div p:nth-child(2),
+    .job-desc-content .descriptipn .img div p:nth-child(3) {
+        font-size: 12px;
+    }
+
+    .job-desc-content .uxJob {
+        width: 600px;
+    }
+
+    .job-question {
+        margin-top: 40px;
+    }
+
+    .job-question .title {
+        margin: 15px 0px;
+    }
+
+    .job-question .question {
+        font-size: 18px;
+    }
+
+    .job-question .list {
+        font-size: 14px;
+    }
+
+    .interview .meeting .meetingImg img {
+        width: 400px;
+    }
+
+    .home {
+        display: flex;
+        align-items: center;
+    }
+
+    .home .companyImg img {
+        width: 400px;
+        height: 430px;
+    }
+
+    .home .all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home .all .Yes-or-No {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .home .all .Yes-or-No .question {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .home .all .Yes-or-No label {
+        letter-spacing: 1px;
+    }
+
+    .home .all .No p {
+        letter-spacing: 1px;
+    }
+}
+
+
+
+@media (max-width:750px) {
+
+    body {
+        margin: 30px 20px;
+    }
+
+    .validate .two form {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .validate .two form input {
+        width: 540px;
+    }
+
+    .validate .two form .input {
+        margin: 15px 0;
+    }
+
+    .footer .unsubscribe {
+        width: 85%;
+    }
+
+    .home .all .Yes-or-No .question {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .home .all .No p {
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin: 30px 0;
+    }
+
+    .interview .meetingSart .popup {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+    }
+    
+    .interview .meetingSart .popup p {
+        margin: 20px 0;
+    }
+}
+
+
+
+@media (max-width:680px) {
+
+    body {
+        margin: 30px 10px;
+    }
+
+    .job-desc-content .uxJob {
+        width: 550px;
+    }
+
+    .validate .two form input {
+        width: 500px;
+    }
+
+    .validate .resume {
+        padding: 0 20px;
+    }
+
+    .validate .resume .para {
+        padding: 45px 125px;
+    }
+
+    .contentInfo .contect-privacy p {
+        font-size: 15px;
+    }
+
+    .footer .unsubscribe {
+        width: 85%;
+    }
+
+    .interview .meetingSart .popup {
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+
+@media (max-width:600px) {
+
+    body {
+        margin: 30px 5px;
+    }
+
+    .job-desc-content .uxJob {
+        width: 550px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content .question p {
+        color: var(--black);
+        text-transform: capitalize;
+        font-size: 13px;
+    }
+
+    .content .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content .btn p {
+        margin-right: 10px;
+    }
+
+    .content .btn p i,
+    .content .btn p span {
+        margin: 0 2px;
+    }
+
+    .content .btn button:nth-child(2) {
+        padding: 7px 5px;
+    }
+
+    .content .btn button:nth-child(3) {
+        padding: 7px 5px;
+        margin-left: 10px;
+    }
+
+    .validate .two form input {
+        width: 480px;
+    }
+
+    .contentInfo .contect-privacy p {
+        font-size: 13px;
+    }
+
+    .footer .unsubscribe {
+        width: 90%;
+    }
+
+    .interview .meeting {
+        flex-direction: column;
+    }
+
+    .interview .meeting .meetingImg img {
+        width: 100%;
+    }
+
+    .interview .meeting .meetingSart {
+        margin: 40px 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home .companyImg img {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width:500px) {
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home .companyImg img {
+        width: 100%;
+    }
+
+    .job-desc-content .uxJob {
+        width: 420px;
+    }
+
+    .content .question p {
+        font-size: 12px;
+    }
+
+    .content .btn p {
+        margin-right: 8px;
+    }
+
+    .content .btn p i,
+    .content .btn p span {
+        margin: 0 1px;
+    }
+
+    .content .btn button:nth-child(2) {
+        padding: 7px 3px;
+        font-size: 10px;
+    }
+
+    .content .btn button:nth-child(3) {
+        padding: 7px 3x;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+
+    .validate .two form input {
+        width: 430px;
+    }
+
+    .validate .resume {
+        padding: 0 20px;
+    }
+
+    .validate .resume .para {
+        padding: 45px 95px;
+    }
+
+    .contentInfo .contect-privacy p {
+        font-size: 11px;
+    }
+
+    .footer .unsubscribe {
+        width: 90%;
+    }
+
+    .interview .meeting {
+        flex-direction: column;
+    }
+
+    .interview .meeting .meetingImg img {
+        width: 100%;
+    }
+
+    .interview .meeting .meetingSart {
+        margin: 40px 0;
+    }
+}
